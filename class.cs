@@ -1,5 +1,9 @@
 //Code was created using OCR, use with caution.
+<<<<<<< HEAD
 
+=======
+// branch pizza
+>>>>>>> pizza
 using System;
 
 namespace Hello_world
@@ -7,16 +11,31 @@ namespace Hello_world
     //what should be added here (slide 33)
     class Cat
     {
+
+        /* this is a class for the animal: cat */
+        // Member attributes (variables) 
         private bool isEating;
-        //private int _numLives;
-        public int numLives;//However, the user asked the number of lives to be between 0 and 7!
+        private int _numLives;
+        public int numLives
+        {
+            get
+            { return _numLives; }
+            set
+            {
+                if (value <= 7 && value >= 0)
+                {
+                    _numLives = value;
+                }
+            }
+        }
+
         public string Name;
         // Member Functions (methods) 
         public Cat() //constructor 
         {
+            numLives = 7;
             isEating = false;
-            numLives = 10;//change in pizza
-            Name = "";
+            Name = "none";
         }
         public void GiveFood()
         {
@@ -27,6 +46,7 @@ namespace Hello_world
             isEating = false;
         }
         public bool GetEatingStatus()
+
         {
             return isEating;
         }
@@ -43,12 +63,19 @@ namespace Hello_world
             myHouseCat.Name = "Mr. Nibbles"; //one way to change an attribute 
             Console.WriteLine("num lives: " + myHouseCat.numLives);
 
+
             myHouseCat.numLives = 10; // a better way to change an attribute 
             Console.WriteLine("num lives: " + myHouseCat.numLives);
 
             myHouseCat.numLives = 3; // a better way to change an attribute 
             Console.WriteLine("num lives: " + myHouseCat.numLives);
-            myHouseCat.GiveFood();
+
+            myHouseCat.numLives = 3;
+            Console.WriteLine("num lives: " + myHouseCat.numLives);
+            myHouseCat.numLives = 999;
+            Console.WriteLine("num lives: " + myHouseCat.numLives);
+
+               myHouseCat.GiveFood();
             if (myHouseCat.GetEatingStatus())// if he is eating 
             {
                 Console.WriteLine(myHouseCat.Name + " is eating right now");
