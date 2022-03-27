@@ -15,7 +15,7 @@ namespace Hello_world
         public Cat() //constructor 
         {
             isEating = false;
-            numLives = 9;
+            numLives = 10;//change in pizza
             Name = "";
         }
         public void GiveFood()
